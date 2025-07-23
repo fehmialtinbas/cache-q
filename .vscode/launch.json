@@ -1,0 +1,28 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Cache-q Application Attach",
+      "port": 9230,
+      "restart": true,
+      "request": "attach",
+      "type": "node"
+    },
+    {
+      "name": "Cache-q Application Launch",
+      "command": "npm run start:debug cache-q",
+      "cwd": "${workspaceFolder}/cache-q",
+
+      "request": "launch",
+      "type": "node-terminal",
+      "envFile": "${workspaceFolder}/cache-q/.env.development"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Debug:Cache-q Application",
+      "configurations": ["Cache-q Application Launch", "Cache-q Application Attach"],
+      "stopAll": true
+    }
+  ]
+}
