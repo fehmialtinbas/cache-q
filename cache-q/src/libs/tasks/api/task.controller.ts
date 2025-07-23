@@ -1,5 +1,6 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
+import { CreateTaskDto } from '../dto/task.request.dto';
 import { TaskService } from '../task.service';
 
 @ApiTags('tasks') // Swagger menüsünde kategorilendirir
@@ -20,7 +21,14 @@ export class TaskController {
   @Post()
   @ApiOperation({ summary: 'Görev oluştur' })
   @ApiResponse({ status: 201, description: 'Görev başarıyla oluşturuldu' })
-  async createTask(@Body() request: Request): Promise<string> {
+  async createTask(@Body() request: CreateTaskDto): Promise<string> {
     return await this.taskService.createTask(request);
+  }
+
+  @Delete(':id')
+  @ApiOperation({ summary: 'Görevi sil' })
+  @ApiResponse({ status: 200, description: 'Görev başarıyla silindi' })
+  async deleteTask(@Param('id') id: string): Promise<string> {
+    return `Task with ID: ${id} deleted`;
   }
 }

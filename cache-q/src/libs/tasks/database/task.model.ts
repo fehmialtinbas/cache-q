@@ -1,4 +1,3 @@
-import { ApiProperty } from '@nestjs/swagger';
 import { ModelBase } from 'src/libs/common/model.base';
 import {
   Column,
@@ -14,11 +13,9 @@ export class TaskModel extends ModelBase {
   @PrimaryColumn()
   id: string;
 
-  @ApiProperty({ example: 'Task Name', description: 'Görev adı' })
   @Column()
   name: string;
 
-  @ApiProperty({ example: 'Task Description', description: 'Görev açıklaması' })
   @Column()
   description?: string;
 
