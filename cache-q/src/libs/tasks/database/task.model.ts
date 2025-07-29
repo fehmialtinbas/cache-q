@@ -1,6 +1,7 @@
 import { ModelBase } from 'src/libs/common/model.base';
 import {
   Column,
+  CreateDateColumn,
   DeleteDateColumn,
   Entity,
   PrimaryGeneratedColumn,
@@ -18,11 +19,14 @@ export class TaskModel extends ModelBase {
   @Column()
   name: string;
 
+  @Column({ nullable: true })
+  status?: string;
+
   @Column()
   description?: string;
 
-  @Column()
-  createdAt: Date;
+  @CreateDateColumn()
+  createdAt: Date = new Date();
 
   @UpdateDateColumn()
   updatedAt: Date;
