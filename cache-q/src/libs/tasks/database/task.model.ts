@@ -7,6 +7,7 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
+import { TaskStatus } from '../domain/task.types';
 
 @Entity('tasks')
 export class TaskModel extends ModelBase {
@@ -20,7 +21,7 @@ export class TaskModel extends ModelBase {
   name: string;
 
   @Column({ nullable: true })
-  status?: string;
+  status?: TaskStatus;
 
   @Column()
   description?: string;
