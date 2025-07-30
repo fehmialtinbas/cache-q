@@ -7,4 +7,5 @@ export const applicationDBConfig = {
   password: process.env.DB_PASSWORD,
   synchronize: true,
   logging: true,
+  entities: ['libs/**/*.model{.ts,.js}'],
 } as any;
