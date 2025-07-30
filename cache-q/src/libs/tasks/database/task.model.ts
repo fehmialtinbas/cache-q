@@ -7,11 +7,11 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
-import { TaskStatus } from '../domain/task.types';
+import { TasksProps, TaskStatus } from '../domain/task.types';
 
 @Entity('tasks')
 export class TaskModel extends ModelBase {
-  constructor(props: TaskModel) {
+  constructor(props: TasksProps) {
     super(props);
   }
   @PrimaryGeneratedColumn('uuid')
@@ -27,11 +27,11 @@ export class TaskModel extends ModelBase {
   description?: string;
 
   @CreateDateColumn()
-  createdAt: Date = new Date();
+  createdAt?: Date = new Date();
 
   @UpdateDateColumn()
-  updatedAt: Date;
+  updatedAt?: Date;
 
   @DeleteDateColumn()
-  deletedAt: Date;
+  deletedAt?: Date;
 }

@@ -12,7 +12,7 @@ import { TaskModel } from '../database/task.model';
 import { CreateTaskDto } from '../dto/task.request.dto';
 import { TaskService } from '../task.service';
 
-@ApiTags('tasks') // Swagger menüsünde kategorilendirir
+@ApiTags('tasks')
 @Controller('tasks')
 export class TaskController {
   constructor(private readonly taskService: TaskService) {}

@@ -10,7 +10,7 @@
     },
     {
       "name": "Cache-q Application Launch",
-      "command": "npm run start:debug cache-q",
+      "command": "npm run start:debug cache-q --no-lint",
       "cwd": "${workspaceFolder}/cache-q",
 
       "request": "launch",
