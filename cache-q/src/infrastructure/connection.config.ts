@@ -1,3 +1,4 @@
+//if you want to get env params from .env file with process you this
 export const applicationDBConfig = {
   type: 'postgres',
   host: process.env.DB_HOST,
