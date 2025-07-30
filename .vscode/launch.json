@@ -15,7 +15,7 @@
 
       "request": "launch",
       "type": "node-terminal",
-      "envFile": "${workspaceFolder}/cache-q/.env.development"
+      "envFile": "${workspaceFolder}/cache-q/.env"
     }
   ],
   "compounds": [
