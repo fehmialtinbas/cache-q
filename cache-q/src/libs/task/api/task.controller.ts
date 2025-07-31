@@ -10,7 +10,7 @@ import {
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { TaskModel } from '../database/task.model';
 import { CreateTaskDto } from '../dto/task.request.dto';
-import { TaskService } from '../task.service';
+import { TaskService } from '../service/task.service';
 
 @ApiTags('tasks')
 @Controller('tasks')

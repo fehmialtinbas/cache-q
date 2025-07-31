@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { applicationDBConfig } from './infrastructure/connection.config';
-import { TaskController } from './libs/tasks/api/task.controller';
-import { TaskModel } from './libs/tasks/database/task.model';
-import { TaskRepository } from './libs/tasks/task.repository';
-import { TaskService } from './libs/tasks/task.service';
+import { TaskController } from './libs/task/api/task.controller';
+import { TaskModel } from './libs/task/database/task.model';
+import { TaskRepository } from './libs/task/repository/task.repository';
+import { TaskService } from './libs/task/service/task.service';
 
 @Module({
   imports: [

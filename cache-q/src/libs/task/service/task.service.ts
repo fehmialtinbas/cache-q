@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { TaskModel } from './database/task.model';
-import { TaskStatus } from './domain/task.types';
-import { CreateTaskDto } from './dto/task.request.dto';
-import { TaskRepository } from './task.repository';
+import { TaskModel } from '../database/task.model';
+import { TaskStatus } from '../domain/task.types';
+import { CreateTaskDto } from '../dto/task.request.dto';
+import { TaskRepository } from '../repository/task.repository';
 
 @Injectable()
 export class TaskService {
