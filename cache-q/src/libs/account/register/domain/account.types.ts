@@ -2,6 +2,7 @@ export type AccountProps = {
   id: string;
   userName: string;
   email: string;
+  workSpaces?: string[];
   status: AccountStatus;
   role?: AccountRole;
   createdAt: Date;
