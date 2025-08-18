@@ -11,7 +11,10 @@ export class AccountModel extends ModelBase {
   id: string;
 
   @Column({ nullable: false })
-  userName: string;
+  name: string;
+
+  @Column({ nullable: false })
+  password: string;
 
   @Column({ nullable: false, unique: true })
   email: string;
